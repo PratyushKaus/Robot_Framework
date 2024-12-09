@@ -1,5 +1,5 @@
 # Controls when the action will run.
-name: ci_cd_project
+name: Robot_Framework
 
 # Controls when the action will run. 
 on:
@@ -26,16 +26,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: |
-          echo Hello raspberry!
-          ls
+        run: echo hello
+             cd /home/afry/myvenv/myvenv 
+             source .venv/bin/activate
+             robot example_test_suite.robot
+        
  
-  run-python-script:
-    runs-on: self-hosted
-    
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Run Python script
-        run: python LED.py       
+  
     

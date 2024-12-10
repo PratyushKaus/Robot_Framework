@@ -26,13 +26,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo hello
-      - name: Run a one-line script
-        run: cd /home/afry/myvenv/myvenv
-      - name: Run a one-line script
-        run: source .venv/bin/activate
-      - name: Run a one-line script
-        run: robot example_test_suite.robot
+        run: | 
+             echo hello
+             cd /home/afry/myvenv/myvenv
+             source .venv/bin/activate
+             robot example_test_suite.robot
         
  
   

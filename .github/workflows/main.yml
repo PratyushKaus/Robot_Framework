@@ -28,9 +28,12 @@ jobs:
       - name: Run a one-line script
         run: | 
              echo hello
-             cd /home/afry/myvenv/myvenv
+             cd /home/afry/myvenv/myvenv/Robot_Framework/Robot_Framework
              source .venv/bin/activate
              robot example_test_suite.robot
+             git add report.html
+             git commit -m "New Change"
+             git push
         
  
   
